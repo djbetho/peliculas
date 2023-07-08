@@ -1,0 +1,32 @@
+
+<div class="container">
+
+<h1 class="text-center">crear Movie</h1>
+<br><br>
+
+<%= form_with model: @movie, method: :post do |form|  %>
+    <div class="border p-5 shadow col-4">
+            <div class="mb-3">
+                <%=  form.label :name, "Título del Movie",class:"form-label" %>
+                <%=  form.text_field :name ,class:"form-control"%>
+
+            </div>
+            <div class="mb-5">
+                <%= form.label :synopsis, "Synopsis",class:"form-label" %>
+                <%= form.text_field :synopsis,class:"form-control" %>
+            </div>
+            <div class="mb-5">
+                <%= form.label :director, "Director",class:"form-label" %>
+                <%= form.text_field :director,class:"form-control" %>
+            </div>
+
+            <div class="text-center">
+                <%= form.submit "Enviar",class:"btn btn-primary mb-3"%>
+            </div>
+    </div>
+
+<% end %>
+</div>
+<div class="text-center">
+    <%= link_to "Ir al inicio de las Movie", movies_index_path, class:"btn btn-primary" %>
+</div>

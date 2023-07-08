@@ -1,0 +1,2 @@
+class Documentfilm < ApplicationRecord
+end

@@ -1,0 +1,10 @@
+<h1>Mostrando todas Movies</h1>
+<p><% @movies.each do |movie| %>
+    <h2><%= movie.name %></h2>
+    <p> <%= movie.synopsis %></p>
+    <p> <%= movie.director %></p>
+
+    <% end %>
+</p>
+
+<%= link_to "Agregar nuevo Post", movies_new_path, class:"btn btn-primary" %>

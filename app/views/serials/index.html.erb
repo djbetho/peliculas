@@ -1,0 +1,10 @@
+<h1>Mostrando todas Serires</h1>
+<p><% @serials.each do |serial| %>
+    <h2><%= serial.name %></h2>
+    <p> <%= serial.synopsis %></p>
+    <p> <%= serial.director %></p>
+
+    <% end %>
+</p>
+
+<%= link_to "Agregar nueva Serie", serials_new_path, class:"btn btn-primary" %>

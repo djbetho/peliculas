@@ -1,0 +1,10 @@
+<h1>Mostrando todas Document</h1>
+<p><% @documents.each do |document| %>
+    <h2><%= document.name %></h2>
+    <p> <%= document.synopsis %></p>
+    <p> <%= document.director %></p>
+
+    <% end %>
+</p>
+
+<%= link_to "Agregar nuevo Document", documentfilms_new_path, class:"btn btn-primary" %>
